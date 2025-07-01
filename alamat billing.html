@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulir Pemesanan Barang</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+  <h5>Output versi desktop:</h5>
+  <div class="text-muted">BOOTSTRAP</div>
+  <div class="p-4 bg-white shadow-sm rounded">
+    <h2 class="text-center">Contoh Formulir Pemesanan Barang</h2>
+    <p class="text-center">Berikut ini adalah contoh formulir pemesanan barang yang dibuat dengan beberapa komponen form Bootstrap. Setiap komponen membutuhkan validasi agar formulir online ini bisa disubmit tanpa terjadi salah input.</p>
+    <div class="text-center mb-4">
+      <a href="#" class="btn btn-primary">Kembali ke Tabel Sebelumnya</a>
+    </div>
+
+    <div class="row g-5">
+      <!-- Form -->
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Alamat billing</h4>
+        <form>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nama depan</label>
+              <input type="text" class="form-control" id="firstName" required>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Nama belakang</label>
+              <input type="text" class="form-control" id="lastName" required>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email (Opsional)</label>
+              <input type="email" class="form-control" id="email" placeholder="contoh@emailku.com">
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Alamat</label>
+              <input type="text" class="form-control" id="address" value="Perumahan Pondok Permai B4" required>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Kota/Kabupaten</label>
+              <input type="text" class="form-control" id="city" required>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Provinsi</label>
+              <select class="form-select" id="state" required>
+                <option value="">Pilih...</option>
+                <option>Jawa Barat</option>
+                <option>Jawa Tengah</option>
+                <option>Jawa Timur</option>
+                <option>Yogyakarta</option>
+            
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Kode Pos</label>
+              <input type="text" class="form-control" id="zip" required>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">Alamat pengiriman sama dengan alamat billing.</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Simpan informasi ini untuk selanjutnya.</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Pembayaran</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Kartu kredit</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">cash-tunai</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">qris</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Nama pemilik kartu</label>
+              <input type="text" class="form-control" id="cc-name" required>
+              <small class="text-muted">Masukkan nama lengkap yang tertera pada kartu.</small>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Nomor kartu kredit</label>
+              <input type="text" class="form-control" id="cc-number" required>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Masa kedaluwarsa</label>
+              <input type="text" class="form-control" id="cc-expiration" required>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">Kode CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" required>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Proses pembayaran</button>
+        </form>
+
+        <p class="mt-5 mb-3 text-muted text-center">
+          © 2023 Praktikum 11 - Pengenalan Perancangan Web | Nama Mahasiswa - NIM
+        </p>
+      </div>
+
+      <!-- Keranjang Belanja -->
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Keranjang Belanja</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Kopi Arabika Gula Aren enak iskal</h6>
+              <small class="text-muted">Isi: 200 gram</small>
+            </div>
+            <span class="text-muted">Rp 120.000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Kopi Arabika iran </h6>
+              <small class="text-muted">Isi: 200 gram</small>
+            </div>
+            <span class="text-muted">Rp 130.000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Kopi Arabika </h6>
+              <small class="text-muted">Isi: 200 gram</small>
+            </div>
+            <span class="text-muted">Rp 125.000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Kode Promo</h6>
+              <small>KLIPONDIS</small>
+            </div>
+            <span class="text-success">−Rp 75.000</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (IDR)</span>
+            <strong>Rp 300.000</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Kode promo">
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
