@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var thnsek = prompt("tahun sekarang : ", " ");
+        var thnlah = prompt("tahun lahir anda : "," ");
+        
+        var usia = thnsek -thnlah
+
+        document.write("hai,anda bukan manusia " + usia);
+
+        if (usia >= 10 && usia <=20) {
+            document.write("<br/>")
+            document.write("anda termasuk gen z");
+        }
+        else if (usia < 20 && usia <= 30){
+            document.write("<br/>")
+            document.write("anda termasuk gen y");
+        }
+        else if (usia > 30 && usia <= 40) {
+            document.write("<br/>");
+            document.write("anda termasuk gen x");
+        }
+        else {
+            document.write("<br/>");
+            document.write("usia bukan manusia  tapi     kuntiiiiiii ");
+        }
+
+    </script>
+</body>
+</html> 

@@ -1,0 +1,161 @@
+/* --- Global & Reset Styles --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Header Styles --- */
+header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.2em;
+}
+
+/* --- Navigation Styles --- */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+nav ul li a {
+  color: #adb5bd;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* --- Main Content Area Styles --- */
+main {
+  padding: 20px 15px;
+  max-width: 1100px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+img {
+  border-radius: 20%;
+}
+/* --- Article & Aside Styles (Mobile First - Stacked) --- */
+article {
+  margin-bottom: 30px;
+}
+
+aside {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 4px solid #ced4da;
+}
+
+aside h3 {
+  margin-top: 0;
+  color: #495057;
+}
+
+/* --- Footer Styles --- */
+footer {
+  background-color: #343a40;
+  color: #adb5bd;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 30px;
+  font-size: 0.9em;
+}
+
+/* --- Responsive Styles (Untuk layar lebih besar) --- */
+
+/* Tablet dan Desktop Kecil (misal: >= 768px) */
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+
+  main {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+  }
+
+  article {
+    flex: 3;
+    margin-bottom: 0;
+  }
+
+  aside {
+    flex: 1;
+  }
+
+  footer {
+    padding: 30px;
+  }
+}
+
+/* Desktop Besar (misal: >= 992px) */
+@media (min-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 2.8em;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Validasi Form</title>
+    <script>
+        function validateForm() {
+            let username = document.forms["regForm"]["username"].value;
+            let email = document.forms["regForm"]["email"].value;
+            let password = document.forms["regForm"]["password"].value;
+            let retypePassword = document.forms["regForm"]["retypePassword"].value;
+            let birthday = document.forms["regForm"]["birthday"].value;
+
+            if (username === "") {
+                alert("Anda belum mengisikan Username!");
+                return false;
+            }
+            if (email === "") {
+                alert("Anda belum mengisikan Email!");
+                return false;
+            }
+            if (password === "") {
+                alert("Anda belum mengisikan Password!");
+                return false;
+            }
+            if (retypePassword === "") {
+                alert("Anda belum mengisikan Ulang Password!");
+                return false;
+            }
+            if (password !== retypePassword) {
+                alert("Password dan Ulangi Password tidak cocok!");
+                return false;
+            }
+            if (birthday === "") {
+                alert("Anda belum mengisikan Tanggal Lahir!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Area</h2>
+    <form name="regForm" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>: <input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>: <input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>: <input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Retype Password</td>
+                <td>: <input type="password" name="retypePassword"></td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td>: <input type="date" name="birthday"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Batal">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
